@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aisha Okete Zulkifl — Cybersecurity Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080B12;
+  --bg2:#0D1117;
+  --bg3:#111827;
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.12);
+  --text:#E2E8F0;
+  --muted:#8892A4;
+  --accent:#4F9CF9;
+  --accent2:#63E6BE;
+  --accent3:#F8961E;
+  --pink:#F472B6;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(8,11,18,0.85);backdrop-filter:blur(12px)}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:400;transition:color 0.2s;letter-spacing:0.2px}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff;padding:8px 20px;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity 0.2s;font-family:'Syne',sans-serif}
+.nav-cta:hover{opacity:0.85}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 40px 80px;max-width:1200px;margin:0 auto;gap:80px}
+.hero-text{flex:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(79,156,249,0.1);border:1px solid rgba(79,156,249,0.2);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:28px;font-family:'Syne',sans-serif}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-1.5px;margin-bottom:20px}
+.hero h1 .name{display:block;background:linear-gradient(135deg,#E2E8F0 0%,#8892A4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .title{display:block;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:var(--muted);font-size:17px;max-width:520px;margin-bottom:36px;line-height:1.8;font-weight:300}
+.hero-sub strong{color:var(--text);font-weight:500}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.btn-primary{background:var(--accent);color:#fff;padding:12px 28px;border-radius:8px;font-weight:500;text-decoration:none;font-size:15px;transition:all 0.2s;font-family:'Syne',sans-serif;letter-spacing:0.2px}
+.btn-primary:hover{background:#3b87e8;transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--text);padding:12px 28px;border-radius:8px;font-weight:500;text-decoration:none;font-size:15px;border:1px solid var(--border2);transition:all 0.2s;font-family:'Syne',sans-serif}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.hero-stats{display:flex;gap:32px}
+.stat{border-left:2px solid var(--border2);padding-left:16px}
+.stat-num{font-family:'Syne',sans-serif;font-size:24px;font-weight:700;color:var(--text);display:block}
+.stat-label{font-size:12px;color:var(--muted);letter-spacing:0.5px}
+.hero-image{flex-shrink:0;position:relative}
+.hero-image img{width:320px;height:380px;object-fit:cover;object-position:top;border-radius:16px;border:1px solid var(--border2);display:block;filter:grayscale(20%)}
+.hero-image::before{content:'';position:absolute;inset:-1px;border-radius:17px;background:linear-gradient(135deg,rgba(79,156,249,0.3),rgba(99,230,190,0.1));z-index:-1;filter:blur(20px)}
+.hero-image-tag{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:8px 16px;white-space:nowrap;font-size:13px;color:var(--accent2);font-weight:500;font-family:'Syne',sans-serif}
+
+/* SECTIONS */
+section{padding:80px 40px;max-width:1200px;margin:0 auto}
+.section-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.5px;margin-bottom:16px;line-height:1.1}
+.section-sub{color:var(--muted);font-size:16px;max-width:560px;margin-bottom:56px;font-weight:300}
+.divider{border:none;border-top:1px solid var(--border);margin:0}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-text p{color:var(--muted);font-size:16px;line-height:1.9;margin-bottom:16px;font-weight:300}
+.about-text p strong{color:var(--text);font-weight:500}
+.about-certs{display:flex;flex-direction:column;gap:16px}
+.cert-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:20px 24px;transition:border-color 0.2s}
+.cert-card:hover{border-color:var(--border2)}
+.cert-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.cert-detail{font-size:13px;color:var(--muted);line-height:1.5}
+.cert-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;font-family:'Syne',sans-serif}
+.cert-badge.ceh{background:rgba(248,150,30,0.12);color:var(--accent3);border:1px solid rgba(248,150,30,0.2)}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.skill-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color 0.2s}
+.skill-card:hover{border-color:var(--border2)}
+.skill-card-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.skill-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.skill-icon.blue{background:rgba(79,156,249,0.12);border:1px solid rgba(79,156,249,0.2)}
+.skill-icon.teal{background:rgba(99,230,190,0.12);border:1px solid rgba(99,230,190,0.2)}
+.skill-icon.orange{background:rgba(248,150,30,0.12);border:1px solid rgba(248,150,30,0.2)}
+.skill-icon.pink{background:rgba(244,114,182,0.12);border:1px solid rgba(244,114,182,0.2)}
+.skill-card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:4px 10px;border-radius:4px;font-weight:400}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.project-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:32px;transition:all 0.2s;position:relative;overflow:hidden}
+.project-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.project-card.cloud::before{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.project-card.soc::before{background:linear-gradient(90deg,var(--accent3),var(--pink))}
+.project-type{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.project-type.cloud{color:var(--accent)}
+.project-type.soc{color:var(--accent3)}
+.project-card h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.2;letter-spacing:-0.3px}
+.project-desc{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:20px;font-weight:300}
+.project-highlights{list-style:none;margin-bottom:24px;display:flex;flex-direction:column;gap:8px}
+.project-highlights li{font-size:13px;color:var(--muted);padding-left:16px;position:relative;line-height:1.6}
+.project-highlights li::before{content:'→';position:absolute;left:0;color:var(--accent2);font-size:12px}
+.project-stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.stack-tag{background:rgba(79,156,249,0.08);border:1px solid rgba(79,156,249,0.15);color:var(--accent);font-size:11px;padding:3px 10px;border-radius:4px;font-weight:500;font-family:'Syne',sans-serif;letter-spacing:0.3px}
+.stack-tag.orange{background:rgba(248,150,30,0.08);border-color:rgba(248,150,30,0.15);color:var(--accent3)}
+.project-link{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:13px;text-decoration:none;font-weight:500;font-family:'Syne',sans-serif;transition:gap 0.2s}
+.project-link:hover{gap:10px}
+.project-link::after{content:'→'}
+
+/* EXPERIENCE */
+.exp-timeline{display:flex;flex-direction:column;gap:0}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:40px;padding:32px 0;border-bottom:1px solid var(--border)}
+.exp-item:last-child{border-bottom:none}
+.exp-dates{font-size:13px;color:var(--muted);font-weight:300;padding-top:4px;line-height:1.6}
+.exp-dates strong{display:block;color:var(--text);font-weight:500;margin-bottom:4px;font-size:14px}
+.exp-content h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px}
+.exp-content .company{font-size:14px;color:var(--accent);margin-bottom:12px;font-weight:400}
+.exp-content ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.exp-content li{font-size:14px;color:var(--muted);padding-left:16px;position:relative;line-height:1.7;font-weight:300}
+.exp-content li::before{content:'–';position:absolute;left:0;color:var(--border2)}
+.exp-company-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.company-logo{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--bg);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.company-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
+.company-logo-placeholder{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--bg3);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--muted);flex-shrink:0;text-align:center;line-height:1.2}
+
+/* CONTACT */
+.contact-inner{background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:56px;text-align:center;position:relative;overflow:hidden}
+.contact-inner::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(79,156,249,0.06) 0%,transparent 70%);pointer-events:none}
+.contact-inner h2{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-0.5px;margin-bottom:12px}
+.contact-inner p{color:var(--muted);font-size:16px;margin-bottom:36px;font-weight:300}
+.contact-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.contact-link{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;font-family:'Syne',sans-serif;transition:all 0.2s;border:1px solid var(--border2);color:var(--text)}
+.contact-link:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.contact-link.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.contact-link.primary:hover{background:#3b87e8;border-color:#3b87e8;color:#fff}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:24px 40px;text-align:center}
+footer p{color:var(--muted);font-size:13px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{flex-direction:column-reverse;padding:100px 24px 60px;gap:40px;text-align:center}
+  .hero-image img{width:200px;height:240px}
+  .hero-actions{justify-content:center}
+  .hero-stats{justify-content:center}
+  .about-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .exp-item{grid-template-columns:1fr;gap:8px}
+  section{padding:60px 24px}
+  nav{padding:16px 24px}
+  .nav-links{display:none}
+  .contact-inner{padding:36px 24px}
+}
+
+/* BACKGROUND GRID */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,156,249,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,156,249,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+body>*{position:relative;z-index:1}
+
+/* HERO FADE IN */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:fadeUp 0.6s ease both;animation-delay:0.1s;opacity:0}
+.hero h1 .name{animation:fadeUp 0.6s ease both;animation-delay:0.2s;opacity:0}
+.hero h1 .title{animation:fadeUp 0.6s ease both;animation-delay:0.35s;opacity:0}
+.hero-sub{animation:fadeUp 0.6s ease both;animation-delay:0.5s;opacity:0}
+.hero-actions{animation:fadeUp 0.6s ease both;animation-delay:0.65s;opacity:0}
+.hero-stats{animation:fadeUp 0.6s ease both;animation-delay:0.8s;opacity:0}
+.hero-image{animation:fadeUp 0.8s ease both;animation-delay:0.3s;opacity:0}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* SKILL TAG HOVER */
+.tag{transition:all 0.2s;cursor:default}
+.tag:hover{background:rgba(79,156,249,0.1);border-color:rgba(79,156,249,0.3);color:var(--accent);transform:translateY(-1px)}
+
+/* PROJECT CARD GLOW */
+.project-card.cloud:hover{box-shadow:0 0 32px rgba(79,156,249,0.12),0 8px 32px rgba(0,0,0,0.3)}
+.project-card.soc:hover{box-shadow:0 0 32px rgba(248,150,30,0.1),0 8px 32px rgba(0,0,0,0.3)}
+
+/* CERT CARD HOVER */
+.cert-card{transition:all 0.2s}
+.cert-card:hover{border-color:rgba(248,150,30,0.3);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+
+/* ACTIVE NAV */
+.nav-links a{position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width 0.2s}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%}
+.nav-links a.active{color:var(--text)}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-badge,.hero h1 .name,.hero h1 .title,.hero-sub,.hero-actions,.hero-stats,.hero-image{animation:none;opacity:1}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">AZ<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:aishazulkif@gmail.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<div id="home" style="max-width:1200px;margin:0 auto">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">Available for opportunities</div>
+      <h1>
+        <span class="name">Aisha Okete Zulkifl</span>
+        <span class="title">Cybersecurity Engineer</span>
+      </h1>
+      <p class="hero-sub">
+        CEH v12 certified security professional specialising in <strong>cloud security architecture</strong>, <strong>defense-in-depth</strong>, and <strong>offensive security simulation</strong>. I build secure systems and understand how they break.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="https://linkedin.com/in/aisha-zulkifl" target="_blank" class="btn-secondary">LinkedIn</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Security Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">CEH</span>
+          <span class="stat-label">v12 Certified</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">AWS</span>
+          <span class="stat-label">Cloud Security</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- REPLACE THE src BELOW WITH YOUR PHOTO FILENAME -->
+      <img src="profile.jpeg" alt="Aisha Okete Zulkifl">
+      <div class="hero-image-tag">Lagos, Nigeria 🇳🇬</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label reveal">About Me</div>
+  <div class="section-title reveal">Security engineer who builds<br>and breaks systems.</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a cybersecurity professional with a <strong>Bachelor of Science in Information Technology, Networking and Security</strong> from Ajman University, UAE. I hold the <strong>EC-Council CEH v12</strong> certification and have hands-on experience building production-grade cloud security infrastructure on AWS.</p>
+      <p>My approach to security is practical — I've designed and implemented a full <strong>3-tier defense-in-depth AWS architecture</strong> with NACLs, security groups, least-privilege IAM, and real threat detection. I've also simulated real-world attacks in a controlled lab environment, covering the full attack lifecycle from phishing delivery to post-exploitation persistence.</p>
+      <p>I believe the best security engineers understand both how systems are built and how they're broken. That's the lens I bring to every problem.</p>
+    </div>
+    <div class="about-certs">
+      <div class="cert-card">
+        <div class="cert-badge ceh">CEH v12 · 2025</div>
+        <div class="cert-name">EC-Council Certified Ethical Hacker</div>
+        <div class="cert-detail">Network Reconnaissance · System Hacking · Malware Analysis · Perimeter Evasion · Web &amp; Wireless Attack Methodologies</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge" style="background:rgba(99,230,190,0.1);color:#63E6BE;border:1px solid rgba(99,230,190,0.2)">B.Sc. · 2025</div>
+        <div class="cert-name">Information Technology, Networking &amp; Security</div>
+        <div class="cert-detail">Ajman University, UAE · Ethical Hacking · Network Security · Cloud Computing · Information Security</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label reveal">Technical Skills</div>
+  <div class="section-title reveal">What I work with.</div>
+  <div class="skills-grid">
+    <div class="skill-card reveal reveal-delay-1">
+      <div class="skill-card-top">
+        <div class="skill-icon blue">☁</div>
+        <div class="skill-card-title">Cloud Security</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">AWS VPC</span><span class="tag">EC2</span><span class="tag">IAM</span><span class="tag">ALB</span><span class="tag">Auto Scaling</span><span class="tag">RDS</span><span class="tag">Secrets Manager</span><span class="tag">SSM Session Manager</span><span class="tag">CloudTrail</span><span class="tag">GuardDuty</span><span class="tag">NACLs</span><span class="tag">Security Groups</span>
+      </div>
+    </div>
+    <div class="skill-card reveal reveal-delay-2">
+      <div class="skill-card-top">
+        <div class="skill-icon orange">⚔</div>
+        <div class="skill-card-title">Offensive Security</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">Penetration Testing</span><span class="tag">Metasploit</span><span class="tag">msfvenom</span><span class="tag">Meterpreter</span><span class="tag">Reverse Shells</span><span class="tag">Phishing Simulation</span><span class="tag">Privilege Escalation</span><span class="tag">Persistence</span><span class="tag">Kali Linux</span><span class="tag">Nmap</span>
+      </div>
+    </div>
+    <div class="skill-card reveal reveal-delay-3">
+      <div class="skill-card-top">
+        <div class="skill-icon teal">◈</div>
+        <div class="skill-card-title">Security Frameworks</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">NIST CSF</span><span class="tag">CIS AWS Benchmark</span><span class="tag">AWS Well-Architected</span><span class="tag">OWASP Top 10</span><span class="tag">CEH Methodology</span><span class="tag">Defense in Depth</span>
+      </div>
+    </div>
+    <div class="skill-card reveal reveal-delay-4">
+      <div class="skill-card-top">
+        <div class="skill-icon pink">✦</div>
+        <div class="skill-card-title">Networking &amp; Tools</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">Subnetting</span><span class="tag">Firewalls</span><span class="tag">Network Recon</span><span class="tag">VirtualBox</span><span class="tag">Git / GitHub</span><span class="tag">Linux</span><span class="tag">Python (basic)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label reveal">Projects</div>
+  <div class="section-title reveal">Things I've built.</div>
+  <p class="section-sub">Hands-on security projects with full documentation — built to production standards, not just tutorials.</p>
+  <div class="projects-grid">
+
+    <div class="project-card cloud" style="grid-column:1/-1">
+      <div class="project-type cloud">Cloud Security</div>
+      <h3>AWS Secure Cloud Architecture — Defense in Depth</h3>
+      <p class="project-desc">Production-grade 3-tier AWS architecture built with security controls at every layer. Designed to demonstrate how defense-in-depth protects against real-world threats.</p>
+
+      <!-- ARCHITECTURE DIAGRAM -->
+      <div id="diag-wrap" style="background:rgba(0,0,0,0.3);border:1px solid rgba(79,156,249,0.15);border-radius:12px;padding:24px;margin:20px 0;overflow-x:auto;position:relative">
+        <p style="font-size:12px;color:#8892A4;margin-bottom:12px;font-family:DM Sans,sans-serif;font-style:italic">&#x2192; Click any component to learn what it does</p>
+        <div id="diag-tip" style="display:none;position:absolute;background:#0d1117;border:1px solid rgba(79,156,249,0.35);border-radius:10px;padding:14px 18px;max-width:260px;z-index:20;box-shadow:0 8px 32px rgba(0,0,0,0.6);pointer-events:none">
+          <div id="diag-tip-title" style="font-family:Syne,sans-serif;font-size:13px;font-weight:700;color:#E2E8F0;margin-bottom:6px"></div>
+          <div id="diag-tip-body" style="font-size:12px;color:#8892A4;line-height:1.6"></div>
+        </div>
+        <svg width="100%" viewBox="0 0 680 720" role="img" style="min-width:480px;cursor:pointer" id="arch-svg">
+          <title>AWS Secure Cloud Architecture</title>
+          <desc>Three-tier AWS architecture: internet to IGW to public subnet with ALB and NAT, to private app subnet with EC2 instances, to isolated data subnet with RDS and Secrets Manager.</desc>
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+            <style>
+              .flow-line { stroke-dasharray: 6 6; animation: flowAnim 1.2s linear infinite; }
+              .flow-line-slow { stroke-dasharray: 6 6; animation: flowAnim 2s linear infinite; }
+              .flow-line-dashed { stroke-dasharray: 4 6; animation: flowAnim 2.5s linear infinite; }
+              @keyframes flowAnim { to { stroke-dashoffset: -24; } }
+              @media (prefers-reduced-motion: reduce) {
+                .flow-line, .flow-line-slow, .flow-line-dashed { animation: none; }
+              }
+            </style>
+          </defs>
+
+          <!-- Title -->
+          <text x="340" y="26" text-anchor="middle" font-family="Syne,sans-serif" font-size="13" font-weight="700" fill="#8892A4" letter-spacing="2">AWS SECURE CLOUD ARCHITECTURE</text>
+
+          <!-- Internet -->
+          <g data-tip="internet"><rect x="255" y="44" width="170" height="40" rx="8" fill="rgba(136,146,164,0.1)" stroke="#8892A4" stroke-width="0.5"/>
+          <text x="340" y="68" text-anchor="middle" font-family="Syne,sans-serif" font-size="13" font-weight="600" fill="#E2E8F0">🌐  Internet</text></g>
+
+          <!-- Arrow down -->
+          <line x1="340" y1="84" x2="340" y2="112" stroke="#4F9CF9" stroke-width="1.5" marker-end="url(#arr)" class="flow-line"/>
+
+          <!-- IGW -->
+          <g data-tip="igw"><rect x="230" y="112" width="220" height="44" rx="8" fill="rgba(79,156,249,0.08)" stroke="#4F9CF9" stroke-width="0.5"/>
+          <text x="340" y="130" text-anchor="middle" font-family="Syne,sans-serif" font-size="13" font-weight="700" fill="#4F9CF9">Internet Gateway</text>
+          <text x="340" y="146" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">NAT translation · public IP mapping</text></g>
+
+          <!-- PUBLIC SUBNET box -->
+          <rect x="30" y="170" width="620" height="148" rx="12" fill="none" stroke="#4F9CF9" stroke-width="0.5" stroke-dasharray="5 4" opacity="0.5"/>
+          <text x="46" y="188" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="#4F9CF9" letter-spacing="1.5" opacity="0.8">PUBLIC SUBNET — AZ-A &amp; AZ-B</text>
+
+          <!-- Arrow IGW to ALB -->
+          <line x1="340" y1="156" x2="340" y2="204" stroke="#4F9CF9" stroke-width="1.5" marker-end="url(#arr)" class="flow-line"/>
+
+          <!-- ALB -->
+          <g data-tip="alb"><rect x="180" y="204" width="300" height="52" rx="8" fill="rgba(79,156,249,0.1)" stroke="#4F9CF9" stroke-width="0.5"/>
+          <text x="330" y="224" text-anchor="middle" font-family="Syne,sans-serif" font-size="13" font-weight="700" fill="#E2E8F0">Application Load Balancer</text>
+          <text x="330" y="242" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">Internet-facing · HTTP:80 · alb-sg</text></g>
+
+          <!-- NAT GW -->
+          <g data-tip="nat"><rect x="500" y="204" width="136" height="52" rx="8" fill="rgba(99,230,190,0.08)" stroke="#63E6BE" stroke-width="0.5"/>
+          <text x="568" y="224" text-anchor="middle" font-family="Syne,sans-serif" font-size="12" font-weight="700" fill="#63E6BE">NAT Gateway</text>
+          <text x="568" y="240" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">Outbound only</text></g>
+
+          <!-- APP SUBNET box -->
+          <rect x="30" y="334" width="620" height="152" rx="12" fill="none" stroke="#63E6BE" stroke-width="0.5" stroke-dasharray="5 4" opacity="0.5"/>
+          <text x="46" y="352" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="#63E6BE" letter-spacing="1.5" opacity="0.8">APP PRIVATE SUBNET — NO INTERNET ROUTE</text>
+
+          <!-- ALB to instances -->
+          <line x1="270" y1="256" x2="190" y2="374" stroke="#63E6BE" stroke-width="1.5" marker-end="url(#arr)" class="flow-line-slow"/>
+          <line x1="410" y1="256" x2="490" y2="374" stroke="#63E6BE" stroke-width="1.5" marker-end="url(#arr)" class="flow-line-slow"/>
+
+          <!-- Instance A -->
+          <g data-tip="ec2a"><rect x="50" y="374" width="230" height="80" rx="8" fill="rgba(99,230,190,0.07)" stroke="#63E6BE" stroke-width="0.5"/>
+          <text x="165" y="396" text-anchor="middle" font-family="Syne,sans-serif" font-size="12" font-weight="700" fill="#E2E8F0">EC2 Instance A</text>
+          <text x="165" y="413" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">app-sg · SSM only · no public IP</text>
+          <text x="165" y="429" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#63E6BE" opacity="0.7">AZ-a</text></g>
+
+          <!-- Instance B -->
+          <g data-tip="ec2b"><rect x="400" y="374" width="230" height="80" rx="8" fill="rgba(99,230,190,0.07)" stroke="#63E6BE" stroke-width="0.5"/>
+          <text x="515" y="396" text-anchor="middle" font-family="Syne,sans-serif" font-size="12" font-weight="700" fill="#E2E8F0">EC2 Instance B</text>
+          <text x="515" y="413" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">app-sg · SSM only · no public IP</text>
+          <text x="515" y="429" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#63E6BE" opacity="0.7">AZ-b</text></g>
+
+          <!-- ASG label -->
+          <text x="340" y="468" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#63E6BE" opacity="0.7">Auto Scaling Group — min:2 max:4 · ELB health checks</text>
+
+          <!-- NAT outbound dashed -->
+          <path d="M568 256 L568 300 L340 300 L340 334" fill="none" stroke="#63E6BE" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.4" marker-end="url(#arr)"/>
+          <text x="460" y="294" font-family="sans-serif" font-size="10" fill="#63E6BE" opacity="0.6">outbound · SSM · updates</text>
+
+          <!-- DATA SUBNET box -->
+          <rect x="30" y="500" width="620" height="136" rx="12" fill="none" stroke="#9B7EF8" stroke-width="0.5" stroke-dasharray="5 4" opacity="0.5"/>
+          <text x="46" y="518" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="#9B7EF8" letter-spacing="1.5" opacity="0.8">DATA PRIVATE SUBNET — NO INTERNET · NO NAT</text>
+
+          <!-- Instances to RDS -->
+          <line x1="165" y1="454" x2="195" y2="542" stroke="#9B7EF8" stroke-width="1.5" marker-end="url(#arr)" class="flow-line-slow"/>
+          <line x1="515" y1="454" x2="465" y2="542" stroke="#9B7EF8" stroke-width="1.5" marker-end="url(#arr)" class="flow-line-slow"/>
+          <text x="340" y="530" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#9B7EF8" opacity="0.7">port 3306 · data-sg only</text>
+
+          <!-- RDS -->
+          <g data-tip="rds"><rect x="60" y="538" width="230" height="72" rx="8" fill="rgba(155,126,248,0.07)" stroke="#9B7EF8" stroke-width="0.5"/>
+          <text x="175" y="560" text-anchor="middle" font-family="Syne,sans-serif" font-size="12" font-weight="700" fill="#E2E8F0">RDS MySQL</text>
+          <text x="175" y="578" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">data-sg · no public access</text>
+          <text x="175" y="594" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">encrypted at rest</text></g>
+
+          <!-- Secrets Manager -->
+          <g data-tip="secrets"><rect x="380" y="538" width="250" height="72" rx="8" fill="rgba(155,126,248,0.07)" stroke="#9B7EF8" stroke-width="0.5"/>
+          <text x="505" y="560" text-anchor="middle" font-family="Syne,sans-serif" font-size="12" font-weight="700" fill="#E2E8F0">Secrets Manager</text>
+          <text x="505" y="578" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">DB credentials · auto-rotation</text>
+          <text x="505" y="594" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8892A4">never in code or config</text></g>
+
+          <!-- Bottom security controls -->
+          <g data-tip="cloudtrail"><rect x="30" y="638" width="142" height="48" rx="8" fill="rgba(136,146,164,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+          <text x="101" y="658" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" font-weight="700" fill="#E2E8F0">CloudTrail</text>
+          <text x="101" y="674" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8892A4">All API audit logs</text></g>
+
+          <g data-tip="guardduty"><rect x="188" y="638" width="142" height="48" rx="8" fill="rgba(136,146,164,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+          <text x="259" y="658" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" font-weight="700" fill="#E2E8F0">GuardDuty</text>
+          <text x="259" y="674" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8892A4">24/7 threat detection</text></g>
+
+          <g data-tip="naclsg"><rect x="346" y="638" width="142" height="48" rx="8" fill="rgba(136,146,164,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+          <text x="417" y="658" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" font-weight="700" fill="#E2E8F0">NACLs + SGs</text>
+          <text x="417" y="674" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8892A4">Layered network controls</text></g>
+
+          <g data-tip="iamssm"><rect x="504" y="638" width="146" height="48" rx="8" fill="rgba(136,146,164,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+          <text x="577" y="658" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" font-weight="700" fill="#E2E8F0">IAM + SSM</text>
+          <text x="577" y="674" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8892A4">Least privilege · no SSH</text></g>
+        </svg>
+      </div>
+      <script>
+      (function(){
+        var tips = {
+          'internet': ['Internet','All user traffic starts here. Requests travel over the public internet to reach your application.'],
+          'igw': ['Internet Gateway','The front door of the VPC. Performs NAT — translating public IP addresses to private ones. Without it, no traffic enters or leaves.'],
+          'alb': ['Application Load Balancer','The only resource with a public IP. Receives user requests and distributes them across healthy EC2 instances. Protects instances from direct internet exposure.'],
+          'nat': ['NAT Gateway','Allows private instances to make outbound calls (SSM, software updates) without being reachable from the internet. One-way exit only.'],
+          'ec2a': ['EC2 Instance A — AZ-a','Runs the application. No public IP — completely invisible to the internet. Only the ALB can send traffic to it via the app-sg security group.'],
+          'ec2b': ['EC2 Instance B — AZ-b','Identical to Instance A but in a different Availability Zone. If AZ-a has an outage, Instance B keeps the app alive automatically.'],
+          'rds': ['RDS MySQL Database','Stores all application data. Lives in the most isolated subnet — no internet access, not even outbound. Only app instances can connect on port 3306.'],
+          'secrets': ['Secrets Manager','Stores the database password encrypted. Rotates it automatically. Your code never sees the actual password — it asks Secrets Manager at runtime.'],
+          'cloudtrail': ['CloudTrail','Logs every single API call in the AWS account — who did it, when, from which IP. Essential for security investigations and compliance.'],
+          'guardduty': ['GuardDuty','Watches your account 24/7 using machine learning. Detects unusual behaviour, known malicious IPs, and crypto mining automatically.'],
+          'naclsg': ['NACLs + Security Groups','Two independent layers of network control. NACLs work at subnet level (stateless). Security Groups work at instance level (stateful). Both must allow traffic for it to pass.'],
+          'iamssm': ['IAM + SSM Session Manager','No SSH keys anywhere. All instance access goes through SSM — no port 22, no key pairs, every session logged. IAM roles give instances only the minimum permissions they need.']
+        };
+        var svg = document.getElementById('arch-svg');
+        var tip = document.getElementById('diag-tip');
+        var tipTitle = document.getElementById('diag-tip-title');
+        var tipBody = document.getElementById('diag-tip-body');
+        var wrap = document.getElementById('diag-wrap');
+        function showTip(id, evt) {
+          var d = tips[id]; if(!d) return;
+          tipTitle.textContent = d[0];
+          tipBody.textContent = d[1];
+          tip.style.display = 'block';
+          var rect = wrap.getBoundingClientRect();
+          var svgRect = svg.getBoundingClientRect();
+          var x = evt.clientX - rect.left + 12;
+          var y = evt.clientY - rect.top + 12;
+          if(x + 270 > wrap.offsetWidth) x = x - 290;
+          tip.style.left = x + 'px';
+          tip.style.top = y + 'px';
+          tip.style.pointerEvents = 'none';
+        }
+        svg.querySelectorAll('g[data-tip]').forEach(function(g){
+          g.style.cursor = 'pointer';
+          g.addEventListener('click', function(e){ e.stopPropagation(); showTip(g.dataset.tip, e); });
+          g.addEventListener('mouseenter', function(){ g.style.opacity='0.75'; });
+          g.addEventListener('mouseleave', function(){ g.style.opacity='1'; });
+        });
+        document.addEventListener('click', function(){ tip.style.display='none'; });
+      })();
+      </script>
+
+      <ul class="project-highlights">
+        <li>Multi-AZ VPC with public, app, and data subnet tiers — each fully isolated</li>
+        <li>NACLs + Security Groups with SG-to-SG referencing — no IP-based rules</li>
+        <li>SSM Session Manager — zero SSH, no open ports, full audit trail</li>
+        <li>Secrets Manager with auto-rotation — credentials never in code</li>
+        <li>GuardDuty + CloudTrail — 24/7 threat detection and audit logging</li>
+        <li>Security control mapping to CIS, AWS Well-Architected, and NIST CSF</li>
+      </ul>
+      <div class="project-stack">
+        <span class="stack-tag">VPC</span>
+        <span class="stack-tag">EC2</span>
+        <span class="stack-tag">ALB</span>
+        <span class="stack-tag">ASG</span>
+        <span class="stack-tag">RDS</span>
+        <span class="stack-tag">IAM</span>
+        <span class="stack-tag">SSM</span>
+        <span class="stack-tag">GuardDuty</span>
+        <span class="stack-tag">CloudTrail</span>
+      </div>
+      <a href="https://github.com/aisha-0ss" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+    <div class="project-card soc">
+      <div class="project-type soc">Offensive Security</div>
+      <h3>SOC Lab — Attack Simulation &amp; Post-Exploitation</h3>
+      <p class="project-desc">End-to-end attack simulation in an isolated virtual lab — from phishing delivery to Meterpreter shell and persistence. Documented to VAPT engagement standard.</p>
+      <ul class="project-highlights">
+        <li>Custom NAT network in VirtualBox — Kali Linux attacker, Windows 10 victim</li>
+        <li>Payload delivery via email phishing campaign using Gophish and MailHog</li>
+        <li>Meterpreter shell — sysinfo, getuid, netstat, file system exploration</li>
+        <li>Persistence backdoor surviving reboot via Windows registry startup key</li>
+        <li>Full attack lifecycle documented with screenshots at every stage</li>
+      </ul>
+      <div class="project-stack">
+        <span class="stack-tag orange">Kali Linux</span>
+        <span class="stack-tag orange">Metasploit</span>
+        <span class="stack-tag orange">msfvenom</span>
+        <span class="stack-tag orange">Gophish</span>
+        <span class="stack-tag orange">MailHog</span>
+        <span class="stack-tag orange">VirtualBox</span>
+      </div>
+      <a href="https://github.com/aisha-0ss/mini-SOC-Lab" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label reveal">Experience</div>
+  <div class="section-title reveal">Where I've been.</div>
+  <div class="exp-timeline">
+
+    <div class="exp-item reveal">
+      <div class="exp-dates">
+        <strong>May – Sept 2024</strong>
+        Sharjah, UAE<br>6 months
+      </div>
+      <div class="exp-content">
+        <h3>IT Intern</h3>
+        <div class="exp-company-row">
+          <div class="company-logo">
+            <!-- Replace with: <img src="sgmb-logo.png" alt="Sharjah Government Media Bureau"> -->
+            <div class="company-logo-placeholder">SGMB</div>
+          </div>
+          <div class="company">Sharjah Government Media Bureau</div>
+        </div>
+        <ul>
+          <li>Gained exposure to live broadcast network infrastructure in a high-stakes government media environment, observing real-time network monitoring and incident response under operational pressure.</li>
+          <li>Developed working familiarity with network behavior, traffic monitoring, and IT risk management in a production environment where infrastructure reliability was critical.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal reveal-delay-2">
+      <div class="exp-dates">
+        <strong>Oct – Nov 2024</strong>
+        Ajman, UAE
+      </div>
+      <div class="exp-content">
+        <h3>IT Helpdesk Intern</h3>
+        <div class="exp-company-row">
+          <div class="company-logo">
+            <!-- Replace with: <img src="au-logo.png" alt="Ajman University"> -->
+            <div class="company-logo-placeholder">AU</div>
+          </div>
+          <div class="company">Ajman University</div>
+        </div>
+        <ul>
+          <li>Gained exposure to IT support operations in a university environment, observing helpdesk ticketing, triage, and first-line technical support workflows.</li>
+          <li>Developed understanding of how technical issues are documented and escalated in an institutional IT environment.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner reveal">
+    <div class="section-label" style="justify-content:center;display:flex">Get In Touch</div>
+    <h2>Let's work together.</h2>
+    <p>Open to cybersecurity roles, cloud security projects, and security consultancy opportunities.</p>
+    <div class="contact-links">
+      <a href="mailto:aishazulkif@gmail.com" class="contact-link primary">aishazulkif@gmail.com</a>
+      <a href="https://linkedin.com/in/aisha-zulkifl" target="_blank" class="contact-link">LinkedIn</a>
+      <a href="https://github.com/aisha-0ss" target="_blank" class="contact-link">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Aisha Okete Zulkifl · Lagos, Nigeria · Built with intention.</p>
+</footer>
+
+
+<script>
+// Scroll reveal
+var revealEls = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+},{threshold:0.12});
+revealEls.forEach(function(el){ observer.observe(el); });
+
+// Active nav highlight
+var sections = document.querySelectorAll('section[id], div[id]');
+var navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', function(){
+  var scrollY = window.scrollY + 100;
+  sections.forEach(function(sec){
+    if(sec.offsetTop <= scrollY && sec.offsetTop + sec.offsetHeight > scrollY){
+      navLinks.forEach(function(a){ a.classList.remove('active'); });
+      var active = document.querySelector('.nav-links a[href="#'+sec.id+'"]');
+      if(active) active.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
